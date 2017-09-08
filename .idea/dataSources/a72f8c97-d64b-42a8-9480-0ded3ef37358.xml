@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="ratemyteacher@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="ratemyteacher">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="fadbamsevalg"/>
+    <schema id="4" parent="1" name="information_schema"/>
+    <schema id="5" parent="1" name="iuubu"/>
+    <schema id="6" parent="1" name="mysql"/>
+    <schema id="7" parent="1" name="northwind"/>
+    <schema id="8" parent="1" name="opgave"/>
+    <schema id="9" parent="1" name="performance_schema"/>
+    <schema id="10" parent="1" name="phpmyadmin"/>
+    <schema id="11" parent="1" name="sakila"/>
+    <schema id="12" parent="1" name="test"/>
+    <table id="13" parent="2" name="rating"/>
+    <table id="14" parent="2" name="subject"/>
+    <table id="15" parent="2" name="teacher"/>
+    <table id="16" parent="2" name="teacherSubject"/>
+    <table id="17" parent="2" name="user"/>
+    <column id="18" parent="13" name="ratingId">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="19" parent="13" name="userId">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="20" parent="13" name="rating">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="21" parent="13" name="teacherId">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="22" parent="13" name="teacherRating">
+      <ColNames>teacherId</ColNames>
+    </index>
+    <index id="23" parent="13" name="user">
+      <ColNames>userId</ColNames>
+    </index>
+    <key id="24" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ratingId
+userId
+teacherId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="25" parent="13" name="user">
+      <ColNames>userId</ColNames>
+      <RefSchemaName>ratemyteacher</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>userId</RefColNames>
+    </foreign-key>
+    <foreign-key id="26" parent="13" name="teacherRating">
+      <ColNames>teacherId</ColNames>
+      <RefSchemaName>ratemyteacher</RefSchemaName>
+      <RefTableName>teacher</RefTableName>
+      <RefColNames>teacherId</RefColNames>
+    </foreign-key>
+    <column id="27" parent="14" name="subjectId">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="28" parent="14" name="subjectName">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="29" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>subjectId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="30" parent="15" name="teacherId">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="31" parent="15" name="teacherName">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="15" name="teacherImage">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="33" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>teacherId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="34" parent="16" name="teacherId">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="16" name="subjectId">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="36" parent="16" name="subject">
+      <ColNames>subjectId</ColNames>
+    </index>
+    <key id="37" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>teacherId
+subjectId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="38" parent="16" name="teacher">
+      <ColNames>teacherId</ColNames>
+      <RefSchemaName>ratemyteacher</RefSchemaName>
+      <RefTableName>teacher</RefTableName>
+      <RefColNames>teacherId</RefColNames>
+    </foreign-key>
+    <foreign-key id="39" parent="16" name="subject">
+      <ColNames>subjectId</ColNames>
+      <RefSchemaName>ratemyteacher</RefSchemaName>
+      <RefTableName>subject</RefTableName>
+      <RefColNames>subjectId</RefColNames>
+    </foreign-key>
+    <column id="40" parent="17" name="userId">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="41" parent="17" name="username">
+      <Position>2</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="17" name="password">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="17" name="email">
+      <Position>4</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="44" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>userId</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
