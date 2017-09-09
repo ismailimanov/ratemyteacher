@@ -47,3 +47,45 @@ function login($link, $username, $password){
         besked("fejl", "Brugeren findes ikke");
     }
 }
+
+function createTeacher($link, $teacherName, $teacherImage, $imageType, $imageFile, $subject){
+    if($imageType != "jpg" && $imageType != "png"){
+        besked("fejl", "Filtypen er ikke tilladt");
+    } else {
+        if(move_uploaded_file($imageFile["tmp_name"], $teacherImage)) {
+            $sql = 'INSERT INTO teacher (teacherName, teacherImage) VALUES (?, ?)';
+            $stmt = $link->prepare($sql);
+            $stmt->bind_param('ss', $teacherName, $teacherImage);
+            $stmt->execute();
+            $teacherId = $link->insert_id;
+
+            if($stmt->affected_rows > 0){
+                besked("success", "Dit billede er nu tilføjet");
+            }
+            $stmt->close();
+
+            $addSubject = 'INSERT INTO teacherSubject (teacherId, subjectId) VALUES (?, ?)';
+            $stmt = $link->prepare($addSubject);
+            $stmt->bind_param('ii', $teacherId, $subject);
+            $stmt->execute();
+
+            if($stmt->affected_rows < 1){
+                besked("fejl", "Kunne ikke tilføje fag");
+            }
+
+        } else {
+            besked("fejl", "Billedet kunne ikke tilføjes");
+        }
+    }
+}
+
+function getSubjects($link){
+    $subjects = 'SELECT subjectId, subjectName from subject';
+    $stmt = $link->prepare($subjects);
+    $stmt->execute();
+    $stmt->bind_result($subjectId, $subjectName);
+
+    while($stmt->fetch()){
+        echo '<option value="' . $subjectId . '">' . $subjectName . '</option>';
+    }
+}

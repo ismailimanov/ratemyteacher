@@ -7,28 +7,15 @@ if(!isset($_SESSION["loggedIn"])){
 }
 
 if($create = filter_input(INPUT_POST, 'create')){
-    $name = filter_input(INPUT_POST, 'name') or besked("fejl", "Fejl i navnet");
-    $mappenavn = "uploads/";
-    $tidspunkt = round(microtime(true) * 1000);
-    $billede = $mappenavn . $tidspunkt . "-" . basename($_FILES["image"]["name"]);
-    $billedetype = strtolower(pathinfo($billede, PATHINFO_EXTENSION));
+    $name           = filter_input(INPUT_POST, 'name') or besked("fejl", "Fejl i navnet");
+    $mappenavn      = "uploads/";
+    $tidspunkt      = round(microtime(true) * 1000);
+    $billede        = $mappenavn . $tidspunkt . "-" . basename($_FILES["image"]["name"]);
+    $billedetype    = strtolower(pathinfo($billede, PATHINFO_EXTENSION));
+    $billedeFil     = $_FILES["image"];
+    $subject        = filter_input(INPUT_POST, 'subject',FILTER_VALIDATE_INT) or besked("fejl", "Ikke gyldig fag");
 
-    if($billedetype != "jpg" && $billedetype != "png"){
-        besked("fejl", "Filtypen er ikke tilladt");
-    } else {
-        if(move_uploaded_file($_FILES["image"]["tmp_name"], $billede)) {
-            $sql = 'INSERT INTO teacher (teacherName, teacherImage) VALUES (?, ?)';
-            $stmt = $link->prepare($sql);
-            $stmt->bind_param('ss', $name, $billede);
-            $stmt->execute();
-
-            if($stmt->affected_rows > 0){
-                besked("success", "Dit billede er nu tilføjet");
-            }
-        } else {
-            besked("fejl", "Billedet kunne ikke tilføjes");
-        }
-    }
+    createTeacher($link, $name, $billede, $billedetype, $billedeFil, $subject);
 }
 ?>
 <!doctype html>
@@ -49,6 +36,9 @@ if($create = filter_input(INPUT_POST, 'create')){
         ?>
         <form class="form" action="?create=1" method="post" enctype="multipart/form-data">
             <input type="text" name="name" placeholder="Lærerens Navn" required>
+            <select name="subject" required>
+                <?=getSubjects($link)?>
+            </select>
             <input type="file" name="image">
             <input type="submit" name="create" value="Tilføj Lærer">
         </form>
