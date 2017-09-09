@@ -164,6 +164,9 @@ ALTER TABLE `rating`
   ADD CONSTRAINT `teacherRating` FOREIGN KEY (`teacherId`) REFERENCES `teacher` (`teacherId`),
   ADD CONSTRAINT `user` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`);
 
+
+ALTER TALBE `note`
+  ADD CONSTRAINT `
 --
 -- Begrænsninger for tabel `teacherSubject`
 --
