@@ -23,9 +23,16 @@ if($create = filter_input(INPUT_POST, 'create')){
 <head>
     <title>Rate my Teacher</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
     <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/menu.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 </head>
 <body>
+<?php
+include("menu.php");
+?>
     <div class="loginBox">
         <?php
         if(isset($GLOBALS["besked"])){
@@ -43,5 +50,8 @@ if($create = filter_input(INPUT_POST, 'create')){
             <input type="submit" name="create" value="Tilføj Lærer">
         </form>
     </div>
+<script src="js/script.js" type="text/javascript"></script>
+<script src="js/classie.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

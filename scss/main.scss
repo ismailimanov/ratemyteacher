@@ -17,7 +17,11 @@ body {
   align-items: center;
   align-content: center;
   flex-direction: column;
-  background: linear-gradient(135deg,  #e91e63 0%,#9c27b0 100%);
+  background: linear-gradient(135deg, #e91e63, #9c27b0);
+  background-size: 400% 400%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  animation: baggrundAnim 6s ease infinite;
 
 
 
@@ -27,7 +31,6 @@ body {
     background: rgba(255,255,255,.5);
     color: #FFF;
     padding: 1em;
-    margin: 1em;
     border-radius: 10px;
     box-shadow: 0px 5px 0px 0px rgba(255,255,255, .2), 0px 10px 0px 0px rgba(255,255,255, .1);
 
@@ -111,5 +114,113 @@ body {
         background: rgba(244, 67, 54, .9);
       }
     }
+
+    .teacherImage {
+      display: block;
+      margin: 0 auto;
+      max-width: 289px;
+    }
+
+    .teacherName {
+      display: block;
+      text-align: center;
+      font-weight: 500;
+      font-size: 1.5em;
+    }
+
+    .avgRating {
+      display: block;
+      text-align: center;
+      font-size: 1.2em;
+
+      .rated {
+        font-size: 300;
+      }
+
+      .ratingValue {
+        font-weight: 500;
+      }
+    }
+
+    .rating {
+      border: none;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+
+      input {
+        display: none;
+      }
+
+      label {
+        color: #DDD;
+
+        &:before {
+          margin: 5px;
+          font-size: 1.25em;
+          font-family: FontAwesome;
+          content: "\f005";
+        }
+      }
+
+      & > input:checked ~ label, &:not(:checked) > label:hover, &:not(:checked) > label:hover ~ label {
+        color: #FFD700;
+      }
+
+      & > input:checked + label:hover, & > input:checked ~ label:hover, & > label:hover ~ input:checked ~ label, & > input:checked ~ label:hover ~ label {
+        color: #FFED85;
+      }
+    }
+
+    h1 {
+      margin: 0;
+      padding: 0;
+      display: block;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 1.8em;
+    }
+
+    .rank, .fag, .snit {
+      display: block;
+    }
+
+    .divider {
+      display: block;
+      border-bottom: 1px dotted #ccc;
+      margin: 1em 0;
+
+      &:last-of-type {
+        border: none;
+      }
+    }
+
+    .subjects {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+
+      .subject {
+        a {
+          text-decoration: none;
+          color: inherit;
+          font-size: 1.2em;
+          transition: all .3s ease-in-out;
+
+          &:hover, &:focus {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
   }
+}
+
+@keyframes baggrundAnim {
+  0%{background-position:2% 0%}
+  50%{background-position:99% 100%}
+  100%{background-position:2% 0%}
 }

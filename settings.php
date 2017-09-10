@@ -6,18 +6,15 @@ if(!isset($_SESSION["loggedIn"])){
     exit();
 }
 
-if(isset($_GET["vurder"])){
-    $vurder = filter_input(INPUT_GET, 'vurder', FILTER_VALIDATE_INT);
-    $teacherId = filter_input(INPUT_GET, 'teacherId', FILTER_VALIDATE_INT);
-    rate($link, $teacherId, $vurder);
-    header("Location: index.php");
-    exit();
+if(isset($_GET["update"])){
+    $password = filter_input(INPUT_POST, 'password') or besked("fejl", "Ugyldig kodeord");
+    updateInfo($link, $_SESSION["userId"], $password);
 }
 ?>
 <!doctype html>
 <html lang="da">
     <head>
-        <title>Rate my Teacher</title>
+        <title>Rate my Teacher - Indstillinger</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,9 +25,9 @@ if(isset($_GET["vurder"])){
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     </head>
     <body>
-    <?php
-    include("menu.php");
-    ?>
+        <?php
+        include("menu.php");
+        ?>
         <div class="loginBox">
             <?php
             if(isset($GLOBALS["besked"])){
@@ -39,15 +36,13 @@ if(isset($_GET["vurder"])){
                 <?php
             }
             ?>
-            <?php
-                getTeacher($link);
-                if(isset($GLOBALS["teacherId"])) {
-                    getRating($link, $GLOBALS["teacherId"]);
-                }
-            ?>
+            <form class="form" action="?update=1" method="post">
+                <input type="password" name="password" placeholder="Kodeord" required>
+                <input type="submit" name="signup" value="Opdater">
+            </form>
         </div>
-    <script src="js/script.js" type="text/javascript"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/main.js"></script>
-    </body>
+        <script src="js/script.js" type="text/javascript"></script>
+        <script src="js/classie.js"></script>
+        <script src="js/main.js"></script>
+        </body>
 </html>
