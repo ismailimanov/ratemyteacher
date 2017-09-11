@@ -21,7 +21,7 @@ if($create = filter_input(INPUT_POST, 'create')){
 <!doctype html>
 <html lang="da">
 <head>
-    <title>Rate my Teacher</title>
+    <title>Rate my Teacher - Opret lærer</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
     <link href="css/main.css" rel="stylesheet" type="text/css">

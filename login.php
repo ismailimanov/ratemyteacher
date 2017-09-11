@@ -10,7 +10,7 @@
 <!doctype html>
 <html lang="da">
 <head>
-    <title>Rate my Teacher</title>
+    <title>Rate my Teacher - Log ind</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/main.css" rel="stylesheet" type="text/css">

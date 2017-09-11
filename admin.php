@@ -21,7 +21,7 @@ if(isset($_GET["delete"])){
 <!doctype html>
 <html lang="da">
 <head>
-    <title>Rate my Teacher - Topliste</title>
+    <title>Rate my Teacher - Admin</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,11 +31,11 @@ if(isset($_GET["delete"])){
     <link rel="stylesheet" type="text/css" href="css/menu.css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 </head>
-<body>
+<body style="justify-content: inherit;">
 <?php
 include("menu.php");
 ?>
-<div class="loginBox">
+<div class="loginBox" style="margin: 2em 0;">
     <h1>Liste over lærer</h1>
     <?php
         admin($link);

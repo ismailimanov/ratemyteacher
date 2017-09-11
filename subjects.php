@@ -17,7 +17,7 @@ if(isset($_GET["vurder"])){
 <!doctype html>
 <html lang="da">
 <head>
-    <title>Rate my Teacher - Topliste</title>
+    <title>Rate my Teacher - Fag</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
