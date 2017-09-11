@@ -307,7 +307,7 @@ function deleteSubject($link, $tid){
     if($stmt->affected_rows > 0){
         $GLOBALS["deleteTeacher"] = 1;
     } else {
-        echo "Kunne ikke slette - Del 1";
+        echo "Kunne ikke slette lærer fra fag";
     }
     $stmt->close();
 }
@@ -321,7 +321,7 @@ function deleteRating($link, $tid){
         if ($rstmt->affected_rows >= 0) {
             $GLOBALS["deleteTeacher"] = 2;
         } else {
-            echo "Kunne ikke slette - Del 2";
+            echo "Kunne ikke slette lærer fra vurdering";
         }
         $rstmt->close();
     }
@@ -336,7 +336,7 @@ function deleteTeacher($link, $tid){
         if($tstmt->affected_rows > 0){
             echo "Læreren er nu slettet";
         } else {
-            echo "Kunne ikke slettes - Del 3";
+            echo "Kunne ikke slettes lærer";
         }
         $tstmt->close();
     }

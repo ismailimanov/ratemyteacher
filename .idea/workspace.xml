@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f827c2f-c4db-4103-918c-fe9d5b89107f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/functions.php" afterPath="$PROJECT_DIR$/inc/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/main.scss" afterPath="$PROJECT_DIR$/scss/main.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/toplist.php" afterPath="$PROJECT_DIR$/toplist.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -101,7 +100,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="admin.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="admin.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/admin.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="345">
@@ -111,12 +110,14 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="toplist.php" pinned="false" current-in-tab="false">
+          <file leaf-file-name="toplist.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/toplist.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="525">
-                  <caret line="35" column="7" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
-                  <folding />
+                <state relative-caret-position="375">
+                  <caret line="25" column="50" lean-forward="false" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
+                  <folding>
+                    <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -148,36 +149,36 @@
           <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/inc/functions.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="313">
-                  <caret line="323" column="34" lean-forward="true" selection-start-line="323" selection-start-column="34" selection-end-line="323" selection-end-column="34" />
+                <state relative-caret-position="735">
+                  <caret line="338" column="42" lean-forward="false" selection-start-line="338" selection-start-column="42" selection-end-line="338" selection-end-column="42" />
                   <folding>
-                    <marker date="1505123288000" expanded="true" signature="374:434" ph="INSERT INTO user... " />
-                    <marker date="1505123288000" expanded="true" signature="793:853" ph="SELECT userI... user" />
-                    <marker date="1505123288000" expanded="true" signature="1827:1888" ph="INSERT INTO teacher... " />
-                    <marker date="1505123288000" expanded="true" signature="2246:2309" ph="INSERT INTO teacherSubject... " />
-                    <marker date="1505123288000" expanded="true" signature="2736:2778" ph="SELECT subje... subject" />
-                    <marker date="1505123288000" expanded="true" signature="3077:3191" ph="SELECT t.tea... teacher" />
-                    <marker date="1505123288000" expanded="true" signature="3077:3192" ph="SELECT t.tea... teacher" />
-                    <marker date="1505123288000" expanded="true" signature="3077:3274" ph="SELECT t.tea... teacher" />
-                    <marker date="1505123288000" expanded="true" signature="3293:3446" ph="SELECT teach... teacher" />
-                    <marker date="1505123288000" expanded="true" signature="3293:3470" ph="SELECT teach... teacher" />
-                    <marker date="1505123288000" expanded="true" signature="3374:3418" ph="SELECT teach... rating" />
-                    <marker date="1505123288000" expanded="true" signature="3374:3445" ph="SELECT teach... rating" />
-                    <marker date="1505123288000" expanded="true" signature="4099:4149" ph="SELECT avg(r... rating" />
-                    <marker date="1505123288000" expanded="true" signature="5523:5586" ph="INSERT INTO rating... " />
-                    <marker date="1505123288000" expanded="true" signature="5945:6350" ph="SELECT teach... teacher" />
-                    <marker date="1505123288000" expanded="true" signature="5945:6359" ph="SELECT teach... teacher" />
-                    <marker date="1505123288000" expanded="true" signature="7104:7145" ph="UPDATE user " />
-                    <marker date="1505123288000" expanded="true" signature="7464:7752" ph="SELECT `subj... subject" />
-                    <marker date="1505123288000" expanded="true" signature="8129:8585" ph="SELECT teach... teacher" />
-                    <marker date="1505123288000" expanded="true" signature="8129:8641" ph="SELECT teach... teacher" />
-                    <marker date="1505123288000" expanded="true" signature="9278:9621" ph="SElECT teach... teacher" />
-                    <marker date="1505123288000" expanded="true" signature="9818:10039" ph="..." />
-                    <marker date="1505123288000" expanded="true" signature="9842:10039" ph="..." />
-                    <marker date="1505123288000" expanded="true" signature="9880:9886" ph=" " />
-                    <marker date="1505123288000" expanded="true" signature="10498:10542" ph="DELETE FROM " />
-                    <marker date="1505123288000" expanded="true" signature="10888:10924" ph="DELETE FROM " />
-                    <marker date="1505123288000" expanded="true" signature="11324:11361" ph="DELETE FROM " />
+                    <marker date="1505133022000" expanded="true" signature="374:434" ph="INSERT INTO user... " />
+                    <marker date="1505133022000" expanded="true" signature="793:853" ph="SELECT userI... user" />
+                    <marker date="1505133022000" expanded="true" signature="1827:1888" ph="INSERT INTO teacher... " />
+                    <marker date="1505133022000" expanded="true" signature="2246:2309" ph="INSERT INTO teacherSubject... " />
+                    <marker date="1505133022000" expanded="true" signature="2736:2778" ph="SELECT subje... subject" />
+                    <marker date="1505133022000" expanded="true" signature="3077:3191" ph="SELECT t.tea... teacher" />
+                    <marker date="1505133022000" expanded="true" signature="3077:3192" ph="SELECT t.tea... teacher" />
+                    <marker date="1505133022000" expanded="true" signature="3077:3274" ph="SELECT t.tea... teacher" />
+                    <marker date="1505133022000" expanded="true" signature="3293:3446" ph="SELECT teach... teacher" />
+                    <marker date="1505133022000" expanded="true" signature="3293:3470" ph="SELECT teach... teacher" />
+                    <marker date="1505133022000" expanded="true" signature="3374:3418" ph="SELECT teach... rating" />
+                    <marker date="1505133022000" expanded="true" signature="3374:3445" ph="SELECT teach... rating" />
+                    <marker date="1505133022000" expanded="true" signature="4099:4149" ph="SELECT avg(r... rating" />
+                    <marker date="1505133022000" expanded="true" signature="5523:5586" ph="INSERT INTO rating... " />
+                    <marker date="1505133022000" expanded="true" signature="5945:6350" ph="SELECT teach... teacher" />
+                    <marker date="1505133022000" expanded="true" signature="5945:6359" ph="SELECT teach... teacher" />
+                    <marker date="1505133022000" expanded="true" signature="7104:7145" ph="UPDATE user " />
+                    <marker date="1505133022000" expanded="true" signature="7464:7752" ph="SELECT `subj... subject" />
+                    <marker date="1505133022000" expanded="true" signature="8129:8585" ph="SELECT teach... teacher" />
+                    <marker date="1505133022000" expanded="true" signature="8129:8641" ph="SELECT teach... teacher" />
+                    <marker date="1505133022000" expanded="true" signature="9278:9621" ph="SElECT teach... teacher" />
+                    <marker date="1505133022000" expanded="true" signature="9818:10039" ph="..." />
+                    <marker date="1505133022000" expanded="true" signature="9842:10039" ph="..." />
+                    <marker date="1505133022000" expanded="true" signature="9880:9886" ph=" " />
+                    <marker date="1505133022000" expanded="true" signature="10498:10542" ph="DELETE FROM " />
+                    <marker date="1505133022000" expanded="true" signature="10894:10930" ph="DELETE FROM " />
+                    <marker date="1505133022000" expanded="true" signature="11342:11379" ph="DELETE FROM " />
                   </folding>
                 </state>
               </provider>
@@ -274,7 +275,6 @@
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/signup.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/toplist.php" />
         <option value="$PROJECT_DIR$/settings.php" />
         <option value="$PROJECT_DIR$/scss/menu.scss" />
         <option value="$PROJECT_DIR$/menu.php" />
@@ -282,6 +282,7 @@
         <option value="$PROJECT_DIR$/subjects.php" />
         <option value="$PROJECT_DIR$/scss/main.scss" />
         <option value="$PROJECT_DIR$/admin.php" />
+        <option value="$PROJECT_DIR$/toplist.php" />
         <option value="$PROJECT_DIR$/inc/functions.php" />
       </list>
     </option>
@@ -450,12 +451,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1504789205979</updated>
-      <workItem from="1504789207284" duration="44101000" />
+      <workItem from="1504789207284" duration="44347000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44101000" />
+    <option name="totallyTimeSpent" value="44347000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="817" extended-state="6" />
@@ -638,14 +639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/toplist.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="7" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scss/main.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2804">
@@ -662,47 +655,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inc/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="323" column="34" lean-forward="true" selection-start-line="323" selection-start-column="34" selection-end-line="323" selection-end-column="34" />
-          <folding>
-            <marker date="1505123288000" expanded="true" signature="374:434" ph="INSERT INTO user... " />
-            <marker date="1505123288000" expanded="true" signature="793:853" ph="SELECT userI... user" />
-            <marker date="1505123288000" expanded="true" signature="1827:1888" ph="INSERT INTO teacher... " />
-            <marker date="1505123288000" expanded="true" signature="2246:2309" ph="INSERT INTO teacherSubject... " />
-            <marker date="1505123288000" expanded="true" signature="2736:2778" ph="SELECT subje... subject" />
-            <marker date="1505123288000" expanded="true" signature="3077:3191" ph="SELECT t.tea... teacher" />
-            <marker date="1505123288000" expanded="true" signature="3077:3192" ph="SELECT t.tea... teacher" />
-            <marker date="1505123288000" expanded="true" signature="3077:3274" ph="SELECT t.tea... teacher" />
-            <marker date="1505123288000" expanded="true" signature="3293:3446" ph="SELECT teach... teacher" />
-            <marker date="1505123288000" expanded="true" signature="3293:3470" ph="SELECT teach... teacher" />
-            <marker date="1505123288000" expanded="true" signature="3374:3418" ph="SELECT teach... rating" />
-            <marker date="1505123288000" expanded="true" signature="3374:3445" ph="SELECT teach... rating" />
-            <marker date="1505123288000" expanded="true" signature="4099:4149" ph="SELECT avg(r... rating" />
-            <marker date="1505123288000" expanded="true" signature="5523:5586" ph="INSERT INTO rating... " />
-            <marker date="1505123288000" expanded="true" signature="5945:6350" ph="SELECT teach... teacher" />
-            <marker date="1505123288000" expanded="true" signature="5945:6359" ph="SELECT teach... teacher" />
-            <marker date="1505123288000" expanded="true" signature="7104:7145" ph="UPDATE user " />
-            <marker date="1505123288000" expanded="true" signature="7464:7752" ph="SELECT `subj... subject" />
-            <marker date="1505123288000" expanded="true" signature="8129:8585" ph="SELECT teach... teacher" />
-            <marker date="1505123288000" expanded="true" signature="8129:8641" ph="SELECT teach... teacher" />
-            <marker date="1505123288000" expanded="true" signature="9278:9621" ph="SElECT teach... teacher" />
-            <marker date="1505123288000" expanded="true" signature="9818:10039" ph="..." />
-            <marker date="1505123288000" expanded="true" signature="9842:10039" ph="..." />
-            <marker date="1505123288000" expanded="true" signature="9880:9886" ph=" " />
-            <marker date="1505123288000" expanded="true" signature="10498:10542" ph="DELETE FROM " />
-            <marker date="1505123288000" expanded="true" signature="10888:10924" ph="DELETE FROM " />
-            <marker date="1505123288000" expanded="true" signature="11324:11361" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="45" lean-forward="true" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toplist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="50" lean-forward="false" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="338" column="42" lean-forward="false" selection-start-line="338" selection-start-column="42" selection-end-line="338" selection-end-column="42" />
+          <folding>
+            <marker date="1505133022000" expanded="true" signature="374:434" ph="INSERT INTO user... " />
+            <marker date="1505133022000" expanded="true" signature="793:853" ph="SELECT userI... user" />
+            <marker date="1505133022000" expanded="true" signature="1827:1888" ph="INSERT INTO teacher... " />
+            <marker date="1505133022000" expanded="true" signature="2246:2309" ph="INSERT INTO teacherSubject... " />
+            <marker date="1505133022000" expanded="true" signature="2736:2778" ph="SELECT subje... subject" />
+            <marker date="1505133022000" expanded="true" signature="3077:3191" ph="SELECT t.tea... teacher" />
+            <marker date="1505133022000" expanded="true" signature="3077:3192" ph="SELECT t.tea... teacher" />
+            <marker date="1505133022000" expanded="true" signature="3077:3274" ph="SELECT t.tea... teacher" />
+            <marker date="1505133022000" expanded="true" signature="3293:3446" ph="SELECT teach... teacher" />
+            <marker date="1505133022000" expanded="true" signature="3293:3470" ph="SELECT teach... teacher" />
+            <marker date="1505133022000" expanded="true" signature="3374:3418" ph="SELECT teach... rating" />
+            <marker date="1505133022000" expanded="true" signature="3374:3445" ph="SELECT teach... rating" />
+            <marker date="1505133022000" expanded="true" signature="4099:4149" ph="SELECT avg(r... rating" />
+            <marker date="1505133022000" expanded="true" signature="5523:5586" ph="INSERT INTO rating... " />
+            <marker date="1505133022000" expanded="true" signature="5945:6350" ph="SELECT teach... teacher" />
+            <marker date="1505133022000" expanded="true" signature="5945:6359" ph="SELECT teach... teacher" />
+            <marker date="1505133022000" expanded="true" signature="7104:7145" ph="UPDATE user " />
+            <marker date="1505133022000" expanded="true" signature="7464:7752" ph="SELECT `subj... subject" />
+            <marker date="1505133022000" expanded="true" signature="8129:8585" ph="SELECT teach... teacher" />
+            <marker date="1505133022000" expanded="true" signature="8129:8641" ph="SELECT teach... teacher" />
+            <marker date="1505133022000" expanded="true" signature="9278:9621" ph="SElECT teach... teacher" />
+            <marker date="1505133022000" expanded="true" signature="9818:10039" ph="..." />
+            <marker date="1505133022000" expanded="true" signature="9842:10039" ph="..." />
+            <marker date="1505133022000" expanded="true" signature="9880:9886" ph=" " />
+            <marker date="1505133022000" expanded="true" signature="10498:10542" ph="DELETE FROM " />
+            <marker date="1505133022000" expanded="true" signature="10894:10930" ph="DELETE FROM " />
+            <marker date="1505133022000" expanded="true" signature="11342:11379" ph="DELETE FROM " />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -19,11 +19,11 @@ if(!isset($_SESSION["loggedIn"])){
         <link rel="stylesheet" type="text/css" href="css/menu.css" />
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     </head>
-    <body>
+    <body style="justify-content: inherit;">
         <?php
             include("menu.php");
         ?>
-        <div class="loginBox">
+        <div class="loginBox" style="margin: 2em 0;">
             <h1>Topliste</h1>
             <?php
                 getToplist($link);
