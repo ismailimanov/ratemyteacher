@@ -165,7 +165,7 @@ function rate($link, $tid, $rat){
 }
 
 function getToplist($link){
-    $toplist = 'SELECT teacher.teacherId AS id, teacher.teacherName AS `name`, teacher.teacherImage AS image, SUM(rating.rating) / count(rating) AS average, `subject`.subjectName as subjectName FROM teacher JOIN rating ON teacher.teacherId = rating.teacherId JOIN teacherSubject ON teacher.teacherId = teacherSubject.teacherId JOIN subject ON teacherSubject.subjectId = subject.subjectId GROUP BY id ORDER BY average DESC';
+    $toplist = 'SELECT teacher.teacherId AS id, teacher.teacherName AS `name`, teacher.teacherImage AS image, SUM(rating.rating) / count(rating) AS average, `subject`.subjectName as subjectName FROM teacher JOIN rating ON teacher.teacherId = rating.teacherId JOIN teacherSubject ON teacher.teacherId = teacherSubject.teacherId JOIN subject ON teacherSubject.subjectId = subject.subjectId GROUP BY id ORDER BY average DESC LIMIT 10';
     $stmt = $link->prepare($toplist);
     $stmt->execute();
     $stmt->bind_result($tid, $tname, $timage, $average, $subjectName);
@@ -255,5 +255,89 @@ LIMIT 1';
         }
     } else {
         echo '<div class="besked rod">Ikke flere du kan stemme på</div>';
+    }
+    $stmt->close();
+}
+
+function admin($link){
+    $admin = 'SElECT teacher.teacherId AS tid,
+teacher.teacherName AS tname,
+teacher.teacherImage AS timage,
+teacherSubject.teacherId AS tstid,
+teacherSubject.subjectId as tssid,
+`subject`.subjectName AS sname
+
+FROM teacher
+
+JOIN teacherSubject ON teacher.teacherId = teacherSubject.teacherId
+JOIN `subject` ON teacherSubject.subjectId = `subject`.subjectId';
+    $stmt = $link->prepare($admin);
+    $stmt->execute();
+    $stmt->bind_result($tid, $tname, $timage, $tstid, $tssid, $sname);
+
+    echo '<table class="admin" cellpadding="10" cellspacing="10">
+                <thead>
+                    <th width="100">&nbsp;</th>
+                    <th>Navn</th>
+                    <th>Fag</th>
+                    <th><i class="fa fa-times"></i></th>
+                </thead>';
+
+    while($stmt->fetch()){
+        ?>
+            <tr>
+                <td><img src="<?=$timage?>" class="adminImg"></td>
+                <td><?=$tname?></td>
+                <td><?=$sname?></td>
+                <td><a href="?delete=1&tid=<?=$tid?>"><i class="fa fa-times"></i></a></td>
+            </tr>
+        <?php
+    }
+    echo '</table>';
+
+    $stmt->close();
+}
+
+function deleteSubject($link, $tid){
+    $GLOBALS["deleteTeacher"] = 0;
+    $fag = 'DELETE FROM teacherSubject WHERE teacherId=?';
+    $stmt = $link->prepare($fag);
+    $stmt->bind_param('i', $tid);
+    $stmt->execute();
+    if($stmt->affected_rows > 0){
+        $GLOBALS["deleteTeacher"] = 1;
+    } else {
+        echo "Kunne ikke slette - Del 1";
+    }
+    $stmt->close();
+}
+
+function deleteRating($link, $tid){
+    if($GLOBALS["deleteTeacher"] == 1) {
+        $rating = 'DELETE FROM rating WHERE teacherId=?';
+        $rstmt = $link->prepare($rating);
+        $rstmt->bind_param('i', $tid);
+        $rstmt->execute();
+        if ($rstmt->affected_rows >= 0) {
+            $GLOBALS["deleteTeacher"] = 2;
+        } else {
+            echo "Kunne ikke slette - Del 2";
+        }
+        $rstmt->close();
+    }
+}
+
+function deleteTeacher($link, $tid){
+    if($GLOBALS["deleteTeacher"] == 2){
+        $teacher = 'DELETE FROM teacher WHERE teacherId=?';
+        $tstmt = $link->prepare($teacher);
+        $tstmt->bind_param('i', $tid);
+        $tstmt->execute();
+        if($tstmt->affected_rows > 0){
+            echo "Læreren er nu slettet";
+        } else {
+            echo "Kunne ikke slettes - Del 3";
+        }
+        $tstmt->close();
     }
 }
